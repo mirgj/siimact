@@ -25,9 +25,9 @@ class Alert extends React.Component {
 
 		return (
 			<div className={classNames}
-			{...attributes}>
-			{close ? <div class="siimple-close" onClick={close}></div> : null }
-			{children}
+    			{...attributes}>
+    			{close ? <div class="siimple-close" onClick={close}></div> : null }
+    			{children}
 			</div>
 			);
 	}

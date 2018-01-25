@@ -9,24 +9,24 @@ class Paragraph extends React.Component {
     }
 
     render() {
-		const {
-			className,
-			children,
-			...attributes
-		} = this.props;
+      const {
+         className,
+         children,
+         ...attributes
+     } = this.props;
 
-        const classNames = mapClass({
-            ['siimple-p']: true,
-            [className]: !!className
-        });
+     const classNames = mapClass({
+        ['siimple-p']: true,
+        [className]: !!className
+    });
 
-        return (
-        	<p className={classNames}
-	            {...attributes}>
-	            {children}
-			</p>
-		);
-    }
+     return (
+       <p className={classNames}
+            {...attributes}>
+            {children}
+       </p>
+       );
+ }
 }
 
 export default Paragraph;

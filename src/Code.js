@@ -9,35 +9,35 @@ class Code extends React.Component {
     }
 
     render() {
-		const {
-			className,
-			children,
-            inline,
-            text,
-			...attributes
-		} = this.props;
+      const {
+         className,
+         children,
+         inline,
+         text,
+         ...attributes
+     } = this.props;
 
-        let classNames = mapClass({
-            ['siimple-code']: true,
+     let classNames = mapClass({
+        ['siimple-code']: true,
+        [className]: !!className
+    });
+     let Tag = 'code';
+     
+     if(!inline) {
+        classNames = mapClass({
+            ['siimple-pre']: true,
             [className]: !!className
-        });
-        let Tag = 'code';
-        
-        if(!inline) {
-            classNames = mapClass({
-                ['siimple-pre']: true,
-                [className]: !!className
-            }); 
-            Tag = 'pre';
-        }
-
-        return (
-        	<Tag className={classNames}
-	            {...attributes}>
-	            {text}
-			</Tag>
-		);
+        }); 
+        Tag = 'pre';
     }
+
+    return (
+       <Tag className={classNames}
+           {...attributes}>
+           {text}
+       </Tag>
+       );
+}
 }
 
 Code.defaultProps = {
