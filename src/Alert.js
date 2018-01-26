@@ -6,33 +6,33 @@ import * as utils from './utils';
 class Alert extends React.Component {
   static defaultProps = {
     color: utils.DefaultColor,
-    close: null
+    onCloseClick: null
   };
   static propTypes = {
     color: PropTypes.string,
-    close: PropTypes.func
+    onCloseClick: PropTypes.func
   };
 
   render() {
     const {
       className,
       color,
-      close,
+      onCloseClick,
       children,
       ...attributes
     } = this.props;
 
     const ncolor = utils.AllowedColor.indexOf(color) !== -1 ? color : utils.DefaultColor;
-    const classNames = mapClass({
-      ['siimple-alert']: true,
-      [`siimple-alert--${ncolor}`]: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-alert', 
+      `siimple-alert--${ncolor}`,
+      { [className]: !!className }
+    );
 
     return (
       <div className={classNames}
         {...attributes}>
-          {close ? <div className="siimple-close" onClick={close}></div> : null }
+          {onCloseClick ? <div className="siimple-close" onClick={onCloseClick}></div> : null }
           {children}
       </div>
     );

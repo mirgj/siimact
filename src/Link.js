@@ -1,6 +1,5 @@
 import React from 'react';
 import mapClass from 'classnames';
-import PropTypes from 'prop-types';
 
 class Link extends React.Component {
 
@@ -11,10 +10,10 @@ class Link extends React.Component {
       ...attributes
     } = this.props;
 
-    const classNames = mapClass({
-      ['siimple-link']: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-link',
+      { [className]: !!className }
+    );
 
     return (
       <a className={classNames} {...attributes}>

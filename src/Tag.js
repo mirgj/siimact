@@ -24,11 +24,11 @@ class Tag extends React.Component {
 
     const HtmlTag = utils.AllowedTag.indexOf(htmlTag) !== -1 ? htmlTag : utils.DefaultTag;
     const ncolor = utils.AllowedColor.indexOf(color) !== -1 ? color : utils.DefaultColor;
-    const classNames = mapClass({
-      ['siimple-tag']: true,
-      [`siimple-tag--${ncolor}`]: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-tag',
+      `siimple-tag--${ncolor}`,
+      { [className]: !!className }
+    );
 
     return (
       <HtmlTag className={classNames}

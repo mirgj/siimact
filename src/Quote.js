@@ -1,6 +1,5 @@
 import React from 'react';
 import mapClass from 'classnames';
-import PropTypes from 'prop-types';
 
 class Quote extends React.Component {
 
@@ -11,10 +10,10 @@ class Quote extends React.Component {
       ...attributes
     } = this.props;
 
-    const classNames = mapClass({
-      ['siimple-blockquote']: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-blockquote',
+      { [className]: !!className }
+    );
 
     return (
       <blockquote  className={classNames}

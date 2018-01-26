@@ -21,17 +21,17 @@ class Code extends React.Component {
       ...attributes
     } = this.props;
 
-    let classNames = mapClass({
-      ['siimple-code']: true,
-      [className]: !!className
-    });
+    let classNames = mapClass(
+      'siimple-code',
+      { [className]: !!className }
+    );
     let Tag = 'code';
 
     if(!inline) {
-      classNames = mapClass({
-        ['siimple-pre']: true,
-        [className]: !!className
-      }); 
+      classNames = mapClass(
+        'siimple-pre',
+        { [className]: !!className }
+      ); 
       Tag = 'pre';
     }
 

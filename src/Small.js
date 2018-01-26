@@ -1,6 +1,5 @@
 import React from 'react';
 import mapClass from 'classnames';
-import PropTypes from 'prop-types';
 
 class Small extends React.Component {
 
@@ -11,13 +10,14 @@ class Small extends React.Component {
       ...attributes
     } = this.props;
 
-    const classNames = mapClass({
-      ['siimple-small']: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-small',
+      { [className]: !!className }
+    );
 
     return (
-      <small className={classNames} {...attributes}>
+      <small className={classNames} 
+        {...attributes}>
           {children}
       </small>
     );

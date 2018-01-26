@@ -20,10 +20,10 @@ class Heading extends React.Component {
     } = this.props;
     
     const nsize = utils.AllowedHeadingSize.indexOf(size) !== -1 ? size : utils.HeadingDefaultSize;
-    const classNames = mapClass({
-      [`siimple-h${nsize}`]: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      `siimple-h${nsize}`,
+      { [className]: !!className }
+    );
 
     return (
       <div className={classNames}

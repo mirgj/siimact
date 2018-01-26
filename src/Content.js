@@ -20,11 +20,11 @@ class Content extends React.Component {
     } = this.props;
 
     const nsize = utils.AllowedSize.indexOf(size) !== -1 ? size : utils.DefaultSize;
-    const classNames = mapClass({
-      ['siimple-content']: true,
-      [`siimple-content--${nsize}`]: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-content', 
+      `siimple-content--${nsize}`,
+      { [className]: !!className }
+    );
 
     return (
       <div className={classNames}

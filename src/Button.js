@@ -40,12 +40,12 @@ class Button extends React.Component {
     } = this.props;
 
     const ncolor = utils.AllowedColor.indexOf(color) !== -1 ? color : utils.DefaultColor;
-    const classNames = mapClass({
-      ['siimple-btn']: true,
-      [`siimple-btn--${ncolor}`]: true,
-      ['siimple-btn--disabled']: disabled,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-btn', 
+      `siimple-btn--${ncolor}`,
+      { 'siimple-btn--disabled': disabled },
+      { [className]: !!className }
+    );
 
     return (
       <div className={classNames} onClick={this.onClick}

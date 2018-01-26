@@ -1,6 +1,5 @@
 import React from 'react';
 import mapClass from 'classnames';
-import PropTypes from 'prop-types';
 
 class Paragraph extends React.Component {
 
@@ -11,10 +10,10 @@ class Paragraph extends React.Component {
       ...attributes
     } = this.props;
 
-    const classNames = mapClass({
-      ['siimple-p']: true,
-      [className]: !!className
-    });
+    const classNames = mapClass(
+      'siimple-p',
+      { [className]: !!className }
+    );
 
     return (
       <p className={classNames}

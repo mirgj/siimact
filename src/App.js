@@ -24,7 +24,7 @@ class App extends React.Component {
         <Alert>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</Alert>
         <Alert color='orange'>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</Alert>
         <Alert color='magenta'>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</Alert>
-        <Alert color='orange' close={this.doSomething}>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</Alert>
+        <Alert color='orange' onCloseClick={this.doSomething}>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</Alert>
         <Paragraph>This is a simple paragraph</Paragraph>
         <Paragraph>This is a simple paragraph with <Code text='some code' inline={true} /> inline</Paragraph>
         <Code text={`<Quote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Quote>
