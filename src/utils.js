@@ -6,3 +6,5 @@ export const AllowedTag = ['div', 'span'];
 export const DefaultTag = 'span';
 export const AllowedHeadingSize = [1, 2, 3, 4, 5, 6];
 export const HeadingDefaultSize = 1;
+export const AllowedSpinnerSize = ['small', 'large'];
+export const AllowedTipType = ['heart', 'exclamation', 'question'];

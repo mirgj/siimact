@@ -9,6 +9,8 @@ import Link from './Link';
 import Small from './Small';
 import Tag from './Tag';
 import Button from './Button';
+import Spinner from './Spinner';
+import Tip from './Tip';
 
 
 class App extends React.Component {
@@ -52,6 +54,21 @@ class App extends React.Component {
         <Button color='magenta'>This is a button magenta</Button>
         <Button color='red' disabled>This button is disabled</Button>
         <Button color='purple' onClick={this.doSomething}>This button have an action disabled</Button>
+        <Content>
+          <Spinner></Spinner>
+          <Spinner color='red'></Spinner>
+          <Spinner color='red' size='small'></Spinner>
+          <Spinner color='red' size='large'></Spinner>
+          <Spinner color='magenta' size='huge'></Spinner>
+        </Content>
+        <Content>
+          <Tip>Plain tip</Tip>
+          <Tip color='green'>Plain tip with color</Tip>
+          <Tip color='red' type='heart'>A lovely message</Tip>
+          <Tip color='orange' type='exclamation'>You should pay attention</Tip>
+          <Tip color='blue' type='question'>What did you said</Tip>
+          
+        </Content>
       </Content>
 
     );
