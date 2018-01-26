@@ -4,6 +4,13 @@ import PropTypes from 'prop-types';
 import * as utils from './utils';
 
 class Content extends React.Component {
+  static defaultProps = {
+    size: utils.DefaultSize
+  };
+  static propTypes = {
+    size: PropTypes.string
+  };
+
   render() {
     const {
       className,
@@ -19,20 +26,14 @@ class Content extends React.Component {
       [className]: !!className
     });
 
-  return (
-    <div className={classNames}
-      {...attributes}>
-        {children}
-    </div>
-  );
- }
-}
+    return (
+      <div className={classNames}
+        {...attributes}>
+          {children}
+      </div>
+    );
+  }
 
-Content.defaultProps = {
-  size: utils.DefaultSize
-};
-Content.propTypes = {
-  size: PropTypes.string
-};
+}
 
 export default Content;

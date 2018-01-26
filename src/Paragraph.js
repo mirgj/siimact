@@ -3,6 +3,7 @@ import mapClass from 'classnames';
 import PropTypes from 'prop-types';
 
 class Paragraph extends React.Component {
+
   render() {
     const {
       className,
@@ -22,6 +23,7 @@ class Paragraph extends React.Component {
       </p>
     );
   }
+  
 }
 
 export default Paragraph;

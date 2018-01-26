@@ -4,6 +4,13 @@ import PropTypes from 'prop-types';
 import * as utils from './utils';
 
 class Heading extends React.Component {
+  static defaultProps = {
+    size: utils.HeadingDefaultSize
+  };
+  static propTypes = {
+    size: PropTypes.number
+  };
+
   render() {
     const {
       className,
@@ -12,7 +19,7 @@ class Heading extends React.Component {
       ...attributes
     } = this.props;
     
-    const nsize = utils.AllowedHeadingSize.indexOf(Number(size)) !== -1 ? size : utils.HeadingDefaultSize;
+    const nsize = utils.AllowedHeadingSize.indexOf(size) !== -1 ? size : utils.HeadingDefaultSize;
     const classNames = mapClass({
       [`siimple-h${nsize}`]: true,
       [className]: !!className
@@ -25,13 +32,7 @@ class Heading extends React.Component {
       </div>
     );
   }
-}
 
-Heading.defaultProps = {
-  size: utils.HeadingDefaultSize
-};
-Heading.propTypes = {
-  size: PropTypes.number
-};
+}
 
 export default Heading;

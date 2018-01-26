@@ -3,6 +3,7 @@ import mapClass from 'classnames';
 import PropTypes from 'prop-types';
 
 class Link extends React.Component {
+
   render() {
     const {
       className,
@@ -21,6 +22,7 @@ class Link extends React.Component {
       </a>
     );
   }
+  
 }
 
 export default Link;

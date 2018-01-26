@@ -4,6 +4,15 @@ import PropTypes from 'prop-types';
 import * as utils from './utils';
 
 class Tag extends React.Component {
+  static defaultProps = {
+    color: utils.DefaultColor,
+    htmlTag: utils.DefaultTag
+  };
+  static propTypes = {
+    color: PropTypes.string,
+    htmlTag: PropTypes.string
+  };
+
   render() {
     const {
       className,
@@ -28,15 +37,7 @@ class Tag extends React.Component {
       </HtmlTag>
     );
   }
+  
 }
-
-Tag.defaultProps = {
-  color: utils.DefaultColor,
-  htmlTag: utils.DefaultTag
-};
-Tag.propTypes = {
-  color: PropTypes.string,
-  htmlTag: PropTypes.string
-};
 
 export default Tag;

@@ -3,6 +3,15 @@ import mapClass from 'classnames';
 import PropTypes from 'prop-types';
 
 class Code extends React.Component {
+  static defaultProps = {
+    inline: false,
+    text: ''
+  };
+  static propTypes = {
+    inline: PropTypes.bool,
+    text: PropTypes.string
+  };
+
   render() {
     const {
       className,
@@ -33,15 +42,7 @@ class Code extends React.Component {
       </Tag>
     );
   }
+  
 }
-
-Code.defaultProps = {
-  inline: false,
-  text: ''
-};
-Code.propTypes = {
-  inline: PropTypes.bool,
-  text: PropTypes.string
-};
 
 export default Code;

@@ -3,6 +3,7 @@ import mapClass from 'classnames';
 import PropTypes from 'prop-types';
 
 class Quote extends React.Component {
+
   render() {
     const {
       className,
@@ -22,6 +23,7 @@ class Quote extends React.Component {
       </blockquote>
     );
   }
+  
 }
 
 export default Quote;
