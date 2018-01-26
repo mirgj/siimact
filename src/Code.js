@@ -3,50 +3,45 @@ import mapClass from 'classnames';
 import PropTypes from 'prop-types';
 
 class Code extends React.Component {
+  render() {
+    const {
+      className,
+      children,
+      inline,
+      text,
+      ...attributes
+    } = this.props;
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-      const {
-         className,
-         children,
-         inline,
-         text,
-         ...attributes
-     } = this.props;
-
-     let classNames = mapClass({
-        ['siimple-code']: true,
-        [className]: !!className
+    let classNames = mapClass({
+      ['siimple-code']: true,
+      [className]: !!className
     });
-     let Tag = 'code';
-     
-     if(!inline) {
-        classNames = mapClass({
-            ['siimple-pre']: true,
-            [className]: !!className
-        }); 
-        Tag = 'pre';
+    let Tag = 'code';
+
+    if(!inline) {
+      classNames = mapClass({
+        ['siimple-pre']: true,
+        [className]: !!className
+      }); 
+      Tag = 'pre';
     }
 
     return (
-       <Tag className={classNames}
-           {...attributes}>
-           {text}
-       </Tag>
-       );
-}
+      <Tag className={classNames}
+        {...attributes}>
+          {text}
+      </Tag>
+    );
+  }
 }
 
 Code.defaultProps = {
-    inline: false,
-    text: ''
+  inline: false,
+  text: ''
 };
 Code.propTypes = {
-    inline: PropTypes.bool,
-    text: PropTypes.string
+  inline: PropTypes.bool,
+  text: PropTypes.string
 };
 
 export default Code;

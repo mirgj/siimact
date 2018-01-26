@@ -2,7 +2,7 @@ import React from 'react';
 import mapClass from 'classnames';
 import PropTypes from 'prop-types';
 
-class Paragraph extends React.Component {
+class Small extends React.Component {
   render() {
     const {
       className,
@@ -11,17 +11,16 @@ class Paragraph extends React.Component {
     } = this.props;
 
     const classNames = mapClass({
-      ['siimple-p']: true,
+      ['siimple-small']: true,
       [className]: !!className
     });
 
     return (
-      <p className={classNames}
-        {...attributes}>
+      <small className={classNames} {...attributes}>
           {children}
-      </p>
+      </small>
     );
   }
 }
 
-export default Paragraph;
+export default Small;

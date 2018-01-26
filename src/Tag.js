@@ -3,40 +3,40 @@ import mapClass from 'classnames';
 import PropTypes from 'prop-types';
 import * as utils from './utils';
 
-class Alert extends React.Component {
+class Tag extends React.Component {
   render() {
     const {
       className,
       color,
-      close,
+      htmlTag,
       children,
       ...attributes
     } = this.props;
 
+    const HtmlTag = utils.AllowedTag.indexOf(htmlTag) !== -1 ? htmlTag : utils.DefaultTag;
     const ncolor = utils.AllowedColor.indexOf(color) !== -1 ? color : utils.DefaultColor;
     const classNames = mapClass({
-      ['siimple-alert']: true,
-      [`siimple-alert--${ncolor}`]: true,
+      ['siimple-tag']: true,
+      [`siimple-tag--${ncolor}`]: true,
       [className]: !!className
     });
 
     return (
-      <div className={classNames}
+      <HtmlTag className={classNames}
         {...attributes}>
-          {close ? <div class="siimple-close" onClick={close}></div> : null }
           {children}
-      </div>
+      </HtmlTag>
     );
   }
 }
 
-Alert.defaultProps = {
+Tag.defaultProps = {
   color: utils.DefaultColor,
-  close: null
+  htmlTag: utils.DefaultTag
 };
-Alert.propTypes = {
+Tag.propTypes = {
   color: PropTypes.string,
-  close: PropTypes.func
+  htmlTag: PropTypes.string
 };
 
-export default Alert;
+export default Tag;
