@@ -11,6 +11,9 @@ import Tag from './Tag';
 import Button from './Button';
 import Spinner from './Spinner';
 import Tip from './Tip';
+import Table from './Table';
+import TRow from './TRow';
+import TCell from './TCell';
 
 
 class App extends React.Component {
@@ -67,7 +70,97 @@ class App extends React.Component {
           <Tip color='red' type='heart'>A lovely message</Tip>
           <Tip color='orange' type='exclamation'>You should pay attention</Tip>
           <Tip color='blue' type='question'>What did you said</Tip>
-          
+          <Table 
+            header={[
+                <TCell key={1}>Header 1</TCell>,
+                <TCell key={2}>Header 2</TCell>,
+                <TCell key={3}>Header 3</TCell>]
+            }
+            rows={
+              [<TRow key={1}>
+                <TCell>Cell 1</TCell>
+                <TCell>Cell 2</TCell>
+                <TCell>Cell 3</TCell>
+              </TRow>,
+              <TRow key={2}>
+                <TCell>Cell 4</TCell>
+                <TCell>Cell 5</TCell>
+                <TCell>Cell 6</TCell>
+              </TRow>]
+            }
+          />
+          <Table striped={true}
+            header={[
+                <TCell key={1}>Header 1</TCell>,
+                <TCell key={2}>Header 2</TCell>,
+                <TCell key={3}>Header 3</TCell>]
+            }
+            rows={
+              [<TRow key={1}>
+                <TCell>Cell 1</TCell>
+                <TCell>Cell 2</TCell>
+                <TCell>Cell 3</TCell>
+              </TRow>,
+              <TRow key={2}>
+                <TCell>Cell 4</TCell>
+                <TCell>Cell 5</TCell>
+                <TCell>Cell 6</TCell>
+              </TRow>,
+              <TRow key={3}>
+                <TCell>Cell 7</TCell>
+                <TCell>Cell 8</TCell>
+                <TCell>Cell 9</TCell>
+              </TRow>]
+            }
+          />
+          <Table striped={true} border={true}
+            header={[
+                <TCell key={1}>Header 1</TCell>,
+                <TCell key={2}>Header 2</TCell>,
+                <TCell key={3}>Header 3</TCell>]
+            }
+            rows={
+              [<TRow key={1}>
+                <TCell>Cell 1</TCell>
+                <TCell>Cell 2</TCell>
+                <TCell>Cell 3</TCell>
+              </TRow>,
+              <TRow key={2}>
+                <TCell>Cell 4</TCell>
+                <TCell>Cell 5</TCell>
+                <TCell>Cell 6</TCell>
+              </TRow>,
+              <TRow key={3}>
+                <TCell>Cell 7</TCell>
+                <TCell>Cell 8</TCell>
+                <TCell>Cell 9</TCell>
+              </TRow>]
+            }
+          />
+          <Table striped={true} border={true} hover={true}
+            header={[
+                <TCell key={1}>Header 1</TCell>,
+                <TCell key={2}>Header 2</TCell>,
+                <TCell key={3}>Header 3</TCell>]
+            }
+            rows={
+              [<TRow key={1}>
+                <TCell>Cell 1</TCell>
+                <TCell>Cell 2</TCell>
+                <TCell>Cell 3</TCell>
+              </TRow>,
+              <TRow key={2}>
+                <TCell>Cell 4</TCell>
+                <TCell>Cell 5</TCell>
+                <TCell>Cell 6</TCell>
+              </TRow>,
+              <TRow key={3}>
+                <TCell>Cell 7</TCell>
+                <TCell>Cell 8</TCell>
+                <TCell>Cell 9</TCell>
+              </TRow>]
+            }
+          />
         </Content>
       </Content>
 

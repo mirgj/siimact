@@ -1,5 +1,7 @@
 import React from 'react';
 import mapClass from 'classnames';
+import PropTypes from 'prop-types';
+import TRow from './TRow'
 
 class Table extends React.Component {
   static defaultProps = {
@@ -10,7 +12,9 @@ class Table extends React.Component {
   static propTypes = {
     striped: PropTypes.bool,
     border: PropTypes.bool,
-    hover: PropTypes.bool
+    hover: PropTypes.bool,
+    header: PropTypes.array,
+    rows: PropTypes.array
   };
 
   render() {
@@ -19,22 +23,30 @@ class Table extends React.Component {
       striped,
       border,
       hover,
-      children,
+      header,
+      rows,
       ...attributes
     } = this.props;
 
     const classNames = mapClass(
       'siimple-table',
-      'siimple-table--striped': striped,
-      'siimple-table--border': border,
-      'siimple-table--hover': hover,
+      { 'siimple-table--striped': striped },
+      { 'siimple-table--border': border },
+      { 'siimple-table--hover': hover },
       { [className]: !!className }
     );
 
     return (
       <div className={classNames}
         {...attributes}>
-          {children}
+          <div className="siimple-table-header">
+            <TRow>
+              {header}
+            </TRow>
+          </div>
+          <div className="siimple-table-body">
+            {rows}
+          </div>
       </div>
     );
   }
