@@ -1,15 +1,12 @@
 {
   "name": "siimact",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0",
-    "siimple": "^3.0.0"
+    "react-dom": "^16.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,13 +14,25 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
+  "description": "A set of react components for Siimple CSS Framework.",
+  "main": "src/index.js",
   "devDependencies": {},
   "keywords": [
     "react",
-    "siimple"
+    "siimple",
+    "components",
+    "ui",
+    "design",
+    "css"
   ],
-  "author": "mirgj",
-  "license": "MIT"
+  "author": "mirgj <mirgj@outlook.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirgj/siimact.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mirgj/siimact/issues"
+  },
+  "homepage": "https://github.com/mirgj/siimact#readme"
 }
