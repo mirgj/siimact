@@ -14,7 +14,20 @@ import Tip from './Tip';
 import Table from './Table';
 import TRow from './TRow';
 import TCell from './TCell';
-
+import Box from './Box';
+import Footer from './Footer';
+import Jumbotron from './Jumbotron';
+import Breadcrumb from './Breadcrumb';
+import Crumb from './Crumb';
+import Menu from './Menu';
+import MenuGroup from './MenuGroup';
+import MenuItem from './MenuItem';
+import SubMenu from './SubMenu';
+import Tabs from './Tabs';
+import TabItem from './TabItem';
+import Navbar from './Navbar';
+import NavTitle from './NavTitle';
+import NavLink from './NavLink';
 
 class App extends React.Component {
   doSomething = (e) => {
@@ -24,7 +37,7 @@ class App extends React.Component {
   render() {
     return (
 
-      <Content>
+      [<Content key={1}>
         <Quote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Quote>
         <Alert>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</Alert>
         <Alert color='orange'>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</Alert>
@@ -56,7 +69,7 @@ class App extends React.Component {
         <Button color='green'>This is a button green</Button>
         <Button color='magenta'>This is a button magenta</Button>
         <Button color='red' disabled>This button is disabled</Button>
-        <Button color='purple' onClick={this.doSomething}>This button have an action disabled</Button>
+        <Button color='purple' onClick={this.doSomething}>This button have an action</Button>
         <Content>
           <Spinner></Spinner>
           <Spinner color='red'></Spinner>
@@ -162,7 +175,58 @@ class App extends React.Component {
             }
           />
         </Content>
-      </Content>
+        <Box>This is a box</Box>
+        <Box title="I'm a box" subTitle='with a subTitle'>and this is my content</Box>
+        <Box title="I'm a box" subTitle='with a subTitle' color='pink'>and this is my pink content</Box>
+        <Jumbotron>Jumbotron element</Jumbotron>
+        <Jumbotron title='Title' subTitle='subTitle' color='orange' size='fluid'>Jumbotron content</Jumbotron>
+        <Breadcrumb 
+          crumbs={[
+            <Crumb>Home</Crumb>,
+            <Crumb>Settings</Crumb>,
+            <Crumb>Interface</Crumb>,
+          ]}
+        />
+        <Menu>
+          <MenuGroup>GROUP 1</MenuGroup>
+          <MenuItem>Link 1</MenuItem>
+          <MenuItem>Link 2</MenuItem>
+          <MenuItem href='https://google.com' target='_blank'>Link 3</MenuItem>
+          <SubMenu>
+            <MenuItem>Link 3.1</MenuItem>
+            <MenuItem>Link 3.2</MenuItem>
+            <SubMenu>
+              <MenuItem>Link 3.2.1</MenuItem>
+              <MenuItem>Link 3.2.2</MenuItem>
+            </SubMenu>
+          </SubMenu>
+        </Menu>
+        <Tabs boxed={true}>
+          <TabItem>T 1</TabItem>
+          <TabItem selected={true}>T 2</TabItem>
+          <TabItem>T 3</TabItem>
+        </Tabs>
+        <Navbar 
+          left={[
+            <NavTitle key={1}>My blog name</NavTitle>
+          ]}
+          right={[
+            <NavLink key={1}>Link 1</NavLink>,
+            <NavLink key={2}>Link 2</NavLink>
+          ]}
+        />
+        <Navbar color='yellow' size='fluid' 
+          right={[
+            <NavTitle key={1}>My blog name</NavTitle>
+          ]}
+          left={[
+            <NavLink key={1}>Link 1</NavLink>,
+            <NavLink key={2}>Link 2</NavLink>
+          ]}
+        />
+      </Content>,
+      <Footer key={2} size='fluid' color='teal'>A Simple footer</Footer>
+      ]
 
     );
   }
