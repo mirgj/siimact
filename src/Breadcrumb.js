@@ -1,7 +1,6 @@
 import React from 'react';
 import mapClass from 'classnames';
 import PropTypes from 'prop-types';
-import TRow from './TRow'
 
 class Breadcrumb extends React.Component {
   static propTypes = {
