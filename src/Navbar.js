@@ -37,10 +37,10 @@ class Navbar extends React.Component {
     return (
       <div className={classNames} 
         {...attributes}>
-        <div class="siimple-layout--left">
+        <div className="siimple-layout--left">
           {left}
         </div>
-        <div class="siimple-layout--right">
+        <div className="siimple-layout--right">
           {right}
         </div>
       </div>

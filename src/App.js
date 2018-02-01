@@ -31,6 +31,12 @@ import NavLink from './NavLink';
 import Grid from './Grid';
 import Row from './Row';
 import Col from './Col';
+import Form from './Form';
+import Field from './Field';
+import Input from './Input';
+import Textarea from './Textarea';
+import Select from './Select';
+import Label from './Label';
 
 class App extends React.Component {
   doSomething = (e) => {
@@ -185,9 +191,9 @@ class App extends React.Component {
         <Jumbotron title='Title' subTitle='subTitle' color='orange' size='fluid'>Jumbotron content</Jumbotron>
         <Breadcrumb 
           crumbs={[
-            <Crumb>Home</Crumb>,
-            <Crumb>Settings</Crumb>,
-            <Crumb>Interface</Crumb>,
+            <Crumb key={1}>Home</Crumb>,
+            <Crumb key={2}>Settings</Crumb>,
+            <Crumb key={3}>Interface</Crumb>,
           ]}
         />
         <Menu>
@@ -245,6 +251,24 @@ class App extends React.Component {
             <Col size={2} extraLarge={2} large={4} medium={6} small={12}>col 2</Col>
           </Row>
         </Grid>
+
+        <Form title='Test new form' detail='this for is just for testing'>
+          <Field label='A simple input' helper='type something random'>
+            <Input type='text' placeholder='test placeholder' fullwidth={true} />
+          </Field>
+          <Field label='A simple Textarea' helper='type something random here'>
+            <Textarea placeholder='textarea' fullwidth={true} />
+          </Field>
+          <Field label='A simple select' helper='select something'>
+            <Select fullwidth={true}>
+              <option>first option</option>
+              <option>second option</option>
+              <option>third option</option>
+            </Select>
+          </Field>
+          <Label>small label</Label>
+          <Input type='text' id='oo' placeholder='test placeholder' fullwidth={true} />
+        </Form>
       </Content>,
       <Footer key={2} size='fluid' color='teal'>A Simple footer</Footer>
       ]
