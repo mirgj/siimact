@@ -28,6 +28,9 @@ import TabItem from './TabItem';
 import Navbar from './Navbar';
 import NavTitle from './NavTitle';
 import NavLink from './NavLink';
+import Grid from './Grid';
+import Row from './Row';
+import Col from './Col';
 
 class App extends React.Component {
   doSomething = (e) => {
@@ -224,6 +227,24 @@ class App extends React.Component {
             <NavLink key={2}>Link 2</NavLink>
           ]}
         />
+
+        <Grid>
+          <Row>
+            <Col size={12}>col 12</Col>
+          </Row>
+          <Row>
+            <Col size={6}>col 6</Col>
+            <Col size={6}>col 6</Col>
+          </Row>
+          <Row>
+            <Col size={2} extraLarge={2} large={4} medium={6} small={12}>col 2</Col>
+            <Col size={2} extraLarge={2} large={4} medium={6} small={12}>col 2</Col>
+            <Col size={2} extraLarge={2} large={4} medium={6} small={12}>col 2</Col>
+            <Col size={2} extraLarge={2} large={4} medium={6} small={12}>col 2</Col>
+            <Col size={2} extraLarge={2} large={4} medium={6} small={12}>col 2</Col>
+            <Col size={2} extraLarge={2} large={4} medium={6} small={12}>col 2</Col>
+          </Row>
+        </Grid>
       </Content>,
       <Footer key={2} size='fluid' color='teal'>A Simple footer</Footer>
       ]

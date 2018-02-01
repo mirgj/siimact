@@ -8,3 +8,5 @@ export const AllowedHeadingSize = [1, 2, 3, 4, 5, 6];
 export const HeadingDefaultSize = 1;
 export const AllowedSpinnerSize = ['small', 'large'];
 export const AllowedTipType = ['heart', 'exclamation', 'question'];
+export const AllowedColSize = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+export const ColDefaultSize = 12;
