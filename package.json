@@ -14,7 +14,7 @@
     "eject": "react-scripts eject"
   },
   "description": "A set of react components for Siimple CSS Framework.",
-  "main": "src/index.js",
+  "main": "lib/siimact.js",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
