@@ -17,7 +17,7 @@ Start to import the **siimact** components in your React application and use it.
 
 ```
 import React, { Component } from 'react';
-import { Alert, Content } from 'siimact'
+import { Alert, Content } from 'siimact';
 
 class App extends Component {
   render() {
@@ -33,3 +33,27 @@ class App extends Component {
 
 export default App;
 ```
+
+## Clone the repository
+An alternative to see how the components work is to clone the test repository - [siimact-test](https://github.com/mirgj/siimact-test) - and run it locally 
+
+```
+git clone https://github.com/mirgj/siimact-test.git
+```
+
+restore the packages
+
+```
+cd siimact-test
+npm install 
+```
+
+and then start it
+
+```
+npm start
+```
+
+## Documentation
+
+> A more useful documentation will be created soon!
