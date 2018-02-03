@@ -6,7 +6,7 @@
 You can find the documentation and the examples about Siimple here: https://www.siimple.xyz/documentation
 
 ## Getting started
-You can to install **siimact** from npm
+You can install **siimact** from npm
 
 ```
 npm install --save siimact
