@@ -36,6 +36,8 @@ import Input from './Input';
 import Textarea from './Textarea';
 import Select from './Select';
 import Label from './Label';
+import Checkbox from './Checkbox';
+import Switch from './Switch';
 
 export {
 	Alert,
@@ -75,5 +77,7 @@ export {
 	Input,
 	Textarea,
 	Select,
-	Label
+	Label,
+	Checkbox,
+	Switch
 }

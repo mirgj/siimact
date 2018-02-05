@@ -10,3 +10,8 @@ export const AllowedSpinnerSize = ['small', 'large'];
 export const AllowedTipType = ['heart', 'exclamation', 'question'];
 export const AllowedColSize = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 export const ColDefaultSize = 12;
+
+let lastId = 0;
+export function getId(prefix='id') {
+    return `${prefix}${++lastId}`;
+}
