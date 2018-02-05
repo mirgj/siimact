@@ -15,7 +15,7 @@ npm install --save siimact
 ## Usage
 Start to import the **siimact** components in your React application and use it.
 
-```
+```jsx
 import React, { Component } from 'react';
 import { Alert, Content } from 'siimact';
 
